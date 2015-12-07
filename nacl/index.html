@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OpenZone</title>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
+  <style>
+  html {
+    height: 100%;
+  }
+  body {
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 10pt;
+    text-shadow: black 1px 1px 1px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: #b0e0c8;
+    background-color: #0a100c;
+  }
+  table {
+    font-size: 10pt;
+  }
+  th {
+    font-weight: normal;
+    text-align: left;
+    padding-right: 10pt;
+    color: #ffffff;
+  }
+  table.keys th {
+    text-align: right;
+  }
+  td {
+    padding-right: 10pt;
+  }
+  table#hudArea {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  div.module {
+    width: 100%;
+    height: 100%;
+  }
+  .detail {
+    font-size: 0.6em;
+    font-weight: normal
+  }
+  embed#module {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+  <script src="../js/nacl.js"></script>
+  <script>
+    var MSG_FINISHED     = "Končano<br>Sedaj lahko varno zapreš to stran.";
+    var MSG_INITIALISING = "Inicializiram ...<br>" +
+                           "<span class='detail'>" +
+                           "Če traja dovolj dolgo, da lahko to bereš, imaš preslabo grafično " +
+                           "kartico ali pa moraš iti na <code>chrome://flags</code> in vklopiti " +
+                           "možnost <code>Preglasi seznam programskega upodabljanja</code>.</span>";
+    var MSG_CHECKING     = "Preverjam posodobitve ...";
+    var MSG_DOWNLOADING  = "Prenašam posodobitve<br>";
+    var MSG_READING      = "Berem podatkovne arhive<br>";
+    var MSG_LOADING      = "Nalagam";
+    var MSG_LAUNCHING    = "Zaganjam NaCl<br>" +
+                           "<span class='detail'>Če traja dovolj dolgo, da lahko to bereš, je " +
+                           "šlo narobe nekaj nepredvidenega.</span>";
+    var MSG_CLOSE        = "Če je to sporočilo prikazano nekaj sekund, je igra verjetno že " +
+                           "shranjena, zato lahko varno zapustiš to stran.";
+  </script>
+</head>
+<body>
+  <table id="hudArea">
+    <tr>
+      <td id="hudText">
+        Nalagam<br>
+        <span class="detail">Deluje samo v brskalniku Google Chrome/Chromium 31 ali novejšem.</span>
+      </td>
+    </tr>
+  </table>
+  <div class="module">
+    <embed id="module" type="application/x-pnacl" src="openzone.nmf">
+  </div>
+</body>
+</html>

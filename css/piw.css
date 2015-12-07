@@ -1,0 +1,47 @@
+#piwTiles {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-spacing: 10px;
+}
+#piwTiles img {
+  display: block;
+  height: 180px;
+  margin: auto;
+}
+#piwTiles td {
+  width: 320px;
+  padding: 0 0 0 0;
+  background-color: black;
+}
+div.piwPopup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+div.piwPopup > div {
+  position: absolute;
+}
+div.piwPopup > div > img, div.piwPopup > div > iframe {
+  display: block;
+  position: absolute;
+  border: 0;
+}
+div.piwPopup > div.piwBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+div.piwPopup > div.piwBox > div {
+  padding: 0 10px 0 10px;
+}

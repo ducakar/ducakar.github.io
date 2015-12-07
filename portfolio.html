@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Davorin Učakar :: Portfolio</title>
+  <style>
+  @import url(css/base.css);
+
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin: 20px;
+  }
+
+  p.github {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  img.github {
+    position: relative;
+    top: 11px;
+    left: -4px;
+  }
+
+  table.intro {
+    width: 1000px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table.intro td {
+    padding: 20px;
+    vertical-align: middle;
+  }
+
+  table.tiles {
+    width: 1000px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table.tiles td.spacing {
+    height: 100px;
+  }
+  table.tiles th {
+    padding: 0;
+    vertical-align: baseline;
+  }
+  table.tiles td {
+    padding: 0;
+    text-align: justify;
+  }
+  table.tiles p {
+    margin: 10px 20px 10px 20px;
+  }
+  table.tiles img.tile, table.tiles iframe.tile {
+    /*width: 1000px;*/
+    height: 576px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2pt 2pt 8pt;
+    border: 0;
+  }
+  table.tiles iframe.tile {
+    width: 1024px;
+    height: 576px;
+  }
+  </style>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/morr-jquery.appear-f5905c7/jquery.appear.js"></script>
+</head>
+<body>
+  <!-- <h1>Davorin Učakar</h1>
+  <table class="intro">
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/GitHub-Mark-32px.png" alt="GitHub" class="github">
+        <a href="https://github.com/ducakar">github.com/ducakar</a>
+      </td>
+    </tr>
+  </table> -->
+  <table class="tiles">
+    <tr>
+      <td style="height: 50px"></td>
+    </tr>
+    <tr>
+      <th><h2>OpenZone<h2></th>
+    </tr>
+    <tr>
+      <td>
+        <p class="github">
+          <img src="img/GitHub-Mark-32px.png" alt="GitHub" class="github">
+          <a href="http://github.com/ducakar/openzone/" target="_blank">github.com/ducakar/openzone</a>
+        </p>
+        <p>
+          OpenZone je 3D-pogon za igre, ki kombinirajo zvrsti FPS, RPG in RTS ter deluje na Windowsu, Linuxu ter
+          PNaCl (Google Chrome), v delu pa je tudi port na Androida.
+        </p>
+        <p>
+          Uporablja OpenGL 2.1 ali OpenGL ES 2.0, OpenAL, SDL 2.0 in Luo za skriptiranje. Modeli se uvoženi iz formatov
+          Collada, MD2 ali MD3, stavbe pa so prevedene iz posebej prilagojenih BSP-stopnenj za Quake 3.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone1.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone3.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone6.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone4.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone2.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/openzone5.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <iframe id="openzoneFrame" src="" class="tile"></iframe>
+        <p>
+          Tipke:
+          <b>W</b>, <b>A</b>, <b>S</b>, <b>D</b> - premikanje,
+          <b>Preslednica</b> - skok,
+          <b>C</b> - preklop počepa,
+          <b>Shift</b> - preklop teka,
+          <b>Tab</b> - inventar,
+          <b>Y</b> - naslednja enota,
+          <b>I</b> - zapusti enoto / nadzoruj izbrano enoto,
+          <b>F10</b> - shranjevanje + glavni meni.
+        </p>
+        <p>
+          Miška:
+          <b>levi gumb</b> - napad,
+          <b>desni gumb</b> - akcija (ikona desno od kurzorja),
+          <b>srednji gumb</b> - primi/spusti predmet (ikona pod kurzorjem),
+          <b>kolešček gor</b> - vrzi predmet, <b>kolešček dol</b> - poberi predmet.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="spacing"></td>
+    </tr>
+    <tr>
+      <th><h2>TextureReplacer<h2></th>
+    </tr>
+    <tr>
+      <td>
+        <p class="github">
+          <img src="img/GitHub-Mark-32px.png" alt="GitHub" class="github">
+          <a href="https://github.com/ducakar/TextureReplacer" target="_blank">github.com/ducakar/TextureReplacer</a>
+        </p>
+        <p>
+          TextureReplacer je dodatek za igro <a target="_blank" href="http://www.kerbalspaceprogram.com">Kerbal Space
+          Program</a>. Omogoča zamenjave privzetih tekstur, odseve v skafandrih in delih raket, prilagoditev obraza
+          in obleke za vsakega kerbalčka posebej oziroma glede na poklic ter možnost snemanja skafandra in zunanje
+          obleke v atmosferi.
+        </p>
+        <p>
+          Uvršča se med 15 najbolj popularnih dodatkov za Kerbal Space Program in je bilo zanj izdelanih že preko 40
+          paketov tekstur.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/tr1.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/tr2.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="img/tr3.jpg" alt="OpenZone" class="tile">
+      </td>
+    </tr>
+    <tr>
+      <td class="spacing"></td>
+    </tr>
+    <tr>
+      <th><h2>Razno<h2></th>
+    </tr>
+    <tr>
+      <th><h3>Kazalke OpenZone</h3></th>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <a target="_blank" href="http://opendesktop.org/content/show.php/OpenZone?content=111343">Miškine kazalke
+          OpenZone</a> za okolje X11. Prvotno je bilo izdelano manjše število provizoričnih kazalk za potrebe pogona
+          OpenZone, kasneje pa je bil nabor dopolnjen z vsemi standardnimi kazalkami za namizji KDE in Gnome.
+        </p>
+        <p>
+          Trenutno je to najbolje ocenjena tema miškinih kazalk na portalih
+          <a target="_blank" href="http://opendesktop.org/">opendesktop.org</a>
+          (<a target="_blank" href="http://kde-look.org/">kde-look.org</a>,
+          <a target="_blank" href="http://gnome-look.org/">gnome-look.org</a>,
+          <a target="_blank" href="http://xfce-look.org/">xfce-look.org</a> …).
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style="text-align: center">
+          <img src="img/openzone-cursors.png" alt="OpenZone" class="tile">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="spacing"></td>
+    </tr>
+    <tr>
+      <th><h3>Črtomir</h3></th>
+    </tr>
+    <tr>
+      <td>
+        <iframe id="crtomirFrame" src="" class="tile"></iframe>
+        <p>Klik na smerne gumbe za premikanje. Zaboje je mogoče porivati kot v sokobanu.</p>
+      </td>
+    </tr>
+    <!-- <tr>
+      <td class="spacing"></td>
+    </tr>
+    <tr>
+      <th><h3>Tetris</h3></th>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          Večigralski tetris, ki sem ga izdelal pred leti, vendar ga naročnik nikoli ni prevzel. Igralci lahko vidijo
+          plošče svojih sotekmovalcev in jim nagajajo z obračanjem plošče ali dodajanjem zidakov.
+        </p>
+        <p>
+          <a target="_blank" href="tetris/index.html">Preizkus enoigralskega načina</a> (potrebuje Javo).
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style="text-align: center">
+          <img src="img/tetris.jpg" alt="Tetris" class="tile">
+        </div>
+      </td>
+    </tr> -->
+  </table>
+  <script>
+  $('iframe.tile').appear()
+  $('iframe.tile').on('disappear', function (e) {
+    if (this.isVisible) {
+      this.src = ''
+      this.isVisible = false
+    }
+  })
+  $('#openzoneFrame').on('appear', function (e) {
+    if (!this.isVisible) {
+      this.src = 'nacl/index.html'
+      this.isVisible = true
+    }
+  })
+  $('#crtomirFrame').on('appear', function (e) {
+    if (!this.isVisible) {
+      this.src = 'crtomir/index.html'
+      this.isVisible = true
+    }
+  })
+  </script>
+</body>
+</html>
