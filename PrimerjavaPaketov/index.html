@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primerjava mobilnih naročniških paketov</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/plans.js"></script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="inputFields">
+          <div><input id="callsInput" placeholder="Minute pogovorov"></div>
+          <div><input id="messagesInput" placeholder="SMS-i in MMS-i"></div>
+          <div><input id="transferInput" placeholder="MiB prenosa podatkov"></div>
+        </td>
+        <td class="checkboxes">
+          <div>
+            <input id="youngCategoryRadio" type="radio" name="category">
+            <label for="youngCategoryRadio">Mlajši od 31 let</label>
+          </div>
+          <div>
+            <input id="retiredCategoryRadio" type="radio" name="category">
+            <label for="retiredCategoryRadio">Upokojenec</label>
+          </div>
+          <div>
+            <input id="genericCategoryRadio" type="radio" name="category" checked="true">
+            <label for="genericCategoryRadio">Drugo</label>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table id="resultTable">
+      <thead>
+        <tr>
+          <td>Operater</td>
+          <td>Paket</td>
+          <td>Cena</td>
+          <td>Upočasnjen prenos</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      callsInput.focus();
+      callsInput.onkeyup = messagesInput.onkeyup = transferInput.onkeyup = updatePlans;
+      youngCategoryRadio.onchange = retiredCategoryRadio.onchange = genericCategoryRadio.onchange = updatePlans;
+
+      function localiseNum(n)
+      {
+        return n.toFixed(2).replace('.', ',');
+      }
+
+      function updatePlans()
+      {
+        var callsQuantity = parseFloat(eval(callsInput.value));
+        var messagesQuantity = parseFloat(eval(messagesInput.value));
+        var transferQuantity = parseFloat(eval(transferInput.value));
+        var isYoung = youngCategoryRadio.checked;
+        var isRetired = retiredCategoryRadio.checked;
+
+        var bestPlans = calculatePlans(callsQuantity, messagesQuantity, transferQuantity,
+            isYoung, isRetired, 7);
+
+        var html = '';
+        for (var i in bestPlans) {
+          var plan = bestPlans[i];
+
+          html += '<tr>' +
+              '<td class="company">' + plan.operator + '</td>' +
+              '<td class="plan"><a href="' + plan.url + '">' + plan.title + '</a></td>' +
+              '<td class="cost">' + localiseNum(plan.cost.amount) + ' €</td>' +
+              '<td class="slowTransfer">' + (plan.cost.slowTransfer ? localiseNum(plan.cost.slowTransfer) + ' MiB' : '') + '</td>' +
+              '</tr>';
+        }
+        resultTable.tBodies[0].innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
