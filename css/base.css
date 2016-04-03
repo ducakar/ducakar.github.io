@@ -7,25 +7,46 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,latin-ext);
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 11pt;
-  color: #303030;
+  color: #333;
   text-shadow: rgba(0, 0, 0, 0.1) 1pt 1pt 2pt;
 }
+
 a {
-  color: #ffa040;
+  color: #fa4;
 }
 a:visited {
-  color: #e060e0;
+  color: #e6e;
 }
 a:hover {
-  color: #60d060;
+  color: #6d6;
 }
 a:focus {
   outline: none;
-  color: #60e060;
+  color: #6e6;
+}
+
+code, kbd, pre {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12pt;
+  text-shadow: none;
+}
+
+kbd {
+  color: #fff;
+  background-color: #444;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+}
+
+pre {
+  color: #fff;
+  background-color: #444;
+  border-radius: 4px;
+  padding: 4px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }

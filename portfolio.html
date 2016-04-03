@@ -70,8 +70,6 @@
     height: 576px;
   }
   </style>
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/morr-jquery.appear-f5905c7/jquery.appear.js"></script>
 </head>
 <body>
   <!-- <h1>Davorin Učakar</h1>
@@ -144,21 +142,21 @@
         <iframe id="openzoneFrame" src="" class="tile"></iframe>
         <p>
           Tipke:
-          <b>W</b>, <b>A</b>, <b>S</b>, <b>D</b> - premikanje,
-          <b>Preslednica</b> - skok,
-          <b>C</b> - preklop počepa,
-          <b>Shift</b> - preklop teka,
-          <b>Tab</b> - inventar,
-          <b>Y</b> - naslednja enota,
-          <b>I</b> - zapusti enoto / nadzoruj izbrano enoto,
-          <b>F10</b> - shranjevanje + glavni meni.
+          <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd> - premikanje,
+          <kbd>Preslednica</kbd> - skok,
+          <kbd>C</kbd> - preklop počepa,
+          <kbd>Shift</kbd> - preklop teka,
+          <kbd>Tab</kbd> - inventar,
+          <kbd>Y</kbd> - naslednja enota,
+          <kbd>I</kbd> - zapusti enoto / nadzoruj izbrano enoto,
+          <kbd>F10</kbd> - shranjevanje + glavni meni.
         </p>
         <p>
           Miška:
-          <b>levi gumb</b> - napad,
-          <b>desni gumb</b> - akcija (ikona desno od kurzorja),
-          <b>srednji gumb</b> - primi/spusti predmet (ikona pod kurzorjem),
-          <b>kolešček gor</b> - vrzi predmet, <b>kolešček dol</b> - poberi predmet.
+          <kbd>levi gumb</kbd> - napad,
+          <kbd>desni gumb</kbd> - akcija (ikona desno od kurzorja),
+          <kbd>srednji gumb</kbd> - primi/spusti predmet (ikona pod kurzorjem),
+          <kbd>kolešček gor</kbd> - vrzi predmet, <kbd>kolešček dol</kbd> - poberi predmet.
         </p>
       </td>
     </tr>
@@ -271,6 +269,8 @@
       </td>
     </tr> -->
   </table>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery_appear/jquery.appear.js"></script>
   <script>
   $('iframe.tile').appear()
   $('iframe.tile').on('disappear', function (e) {
